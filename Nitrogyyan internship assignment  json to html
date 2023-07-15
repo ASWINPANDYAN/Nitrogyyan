@@ -1,0 +1,70 @@
+function createPrescriptionHTML(prescription) {
+  return `
+    <div class="prescription">
+      <div class="medication">${prescription.medication}</div>
+      <div class="details">
+        <div class="dosage">${prescription.dosage}</div>
+        <div class="frequency">${prescription.frequency}</div>
+        <div class="duration">${prescription.duration}</div>
+      </div>
+    </div>
+  `;
+}
+
+function createPatientHTML(patient) {
+  return `
+    <div class="patient">
+      <div class="name">${patient.name}</div>
+      <div class="info">
+        <div class="age">${patient.age} years old</div>
+        <div class="gender">${patient.gender}</div>
+        <div class="address">${patient.address}</div>
+        <div class="phone">${patient.phone}</div>
+      </div>
+    </div>
+  `;
+}
+
+function generateHTML(data) {
+  const patientHTML = createPatientHTML(data.patient);
+  const prescriptionsHTML = data.prescriptions.map(createPrescriptionHTML).join('');
+  
+  return `
+    <div class="smart-rx">
+      <h2>Smart Rx</h2>
+      ${patientHTML}
+      <div class="prescriptions">
+        <h3>Prescriptions</h3>
+        ${prescriptionsHTML}
+      </div>
+    </div>
+  `;
+}
+
+const jsonData = {
+  "patient": {
+    "name": "John Doe",
+    "age": 32,
+    "gender": "Male",
+    "address": "123 Main St, City, Country",
+    "phone": "+1 123-456-7890"
+  },
+  "prescriptions": [
+    {
+      "medication": "Aspirin",
+      "dosage": "500mg",
+      "frequency": "Once daily",
+      "duration": "7 days"
+    },
+    {
+      "medication": "Amoxicillin",
+      "dosage": "250mg",
+      "frequency": "Twice daily",
+      "duration": "10 days"
+    }
+  ]
+};
+
+const htmlOutput = generateHTML(jsonData);
+console.log(htmlOutput);
+
