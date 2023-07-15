@@ -1,0 +1,88 @@
+{
+  "RxNo": "SRX00123",
+  "PName": "John Doe",
+  "Gender": "Male",
+  "Age": "45 Y 0 M 0 D",
+  "ReferredBy": "Dr. Jane Smith",
+  "PrescriptionDate": "2023-07-15",
+  "Medications": [
+    {
+      "MedicationName": "Aspirin",
+      "Dosage": "75 mg",
+      "Frequency": "Once daily",
+      "Duration": "30 days"
+    },
+    {
+      "MedicationName": "Lisinopril",
+      "Dosage": "10 mg",
+      "Frequency": "Once daily",
+      "Duration": "30 days"
+    },
+    {
+      "MedicationName": "Metformin",
+      "Dosage": "500 mg",
+      "Frequency": "Twice daily",
+      "Duration": "30 days"
+    }
+  ],
+  "LabTests": [
+    {
+      "LabNo": "LAB001",
+      "TestName": "Complete Blood Count",
+      "SampleType": "Blood",
+      "SampleCollDate": "2023-07-16 08:00:00",
+      "SampleRcvDate": "2023-07-16 08:15:00",
+      "ApprovalDate": "2023-07-16 10:00:00",
+      "IsNabl": true,
+      "Observations": [
+        {
+          "ParameterName": "Hemoglobin",
+          "Value": "12.5 g/dL",
+          "ReferenceRange": "13.5-17.5 g/dL",
+          "Impression": "Low"
+        },
+        {
+          "ParameterName": "White Blood Cells (WBC)",
+          "Value": "8.0 x 10^9/L",
+          "ReferenceRange": "4.5-11.0 x 10^9/L",
+          "Impression": "Normal"
+        },
+        {
+          "ParameterName": "Platelet Count",
+          "Value": "200 x 10^9/L",
+          "ReferenceRange": "150-450 x 10^9/L",
+          "Impression": "Normal"
+        }
+      ]
+    },
+    {
+      "LabNo": "LAB002",
+      "TestName": "Liver Function Test",
+      "SampleType": "Blood",
+      "SampleCollDate": "2023-07-17 09:30:00",
+      "SampleRcvDate": "2023-07-17 09:45:00",
+      "ApprovalDate": "2023-07-17 11:30:00",
+      "IsNabl": true,
+      "Observations": [
+        {
+          "ParameterName": "Alanine Aminotransferase (ALT)",
+          "Value": "40 U/L",
+          "ReferenceRange": "0-40 U/L",
+          "Impression": "Normal"
+        },
+        {
+          "ParameterName": "Aspartate Aminotransferase (AST)",
+          "Value": "35 U/L",
+          "ReferenceRange": "0-35 U/L",
+          "Impression": "Normal"
+        },
+        {
+          "ParameterName": "Total Bilirubin",
+          "Value": "1.0 mg/dL",
+          "ReferenceRange": "0.2-1.2 mg/dL",
+          "Impression": "Normal"
+        }
+      ]
+    }
+  ]
+}
